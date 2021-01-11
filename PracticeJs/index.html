@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="myData">This is JavaScript</p>
+    <button id="btn">Start Time</button>
+
+    <script>
+        const dataNowPresent = document.querySelector("#myData");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", startTime);
+
+        let time = 0;
+
+        function startTimeCount() {
+            dataNowPresent.innerHTML = `This time is started ${time}`;
+            time++;
+        }
+
+        function startTime() {
+            dataNowPresent.innerHTML = "Time is Loading...."
+
+            setInterval(startTimeCount, 1000);
+        }
+
+        console.log(this);
+
+        function sum(a, b) {
+            let add = a + b;
+            console.log(add);
+            console.log(this);
+        }
+
+        sum(2, 4);
+
+        const personData = {
+            name: "Mark",
+            age: 24,
+            sum:function(){
+                console.log(this);
+                console.log(this.name);
+            }
+        }
+
+        console.log(personData);
+
+        console.log(personData.sum())
+
+    </script>
+</body>
+
+</html>
