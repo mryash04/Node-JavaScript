@@ -24,7 +24,6 @@ console.log(typeof(x));
 let a = null;
 
 console.log(a);
-
 const data = (null == undefined);
 
 console.log(data);
@@ -52,3 +51,5 @@ const array7 = array3.reduce((accum, curValue) =>{
 });
 
 console.log(array7);
+
+console.log(Array.isArray(array3));
